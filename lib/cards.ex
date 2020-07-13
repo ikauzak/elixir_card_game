@@ -9,7 +9,12 @@ defmodule Cards do
   ## Examples
 
       iex> Cards.create_deck()
-      :world
+      ["Ace of Spades", "Two of Spades", "Three of Spades", "Four of Spades",
+      "Five of Spades", "Ace of Clubs", "Two of Clubs", "Three of Clubs",
+      "Four of Clubs", "Five of Clubs", "Ace of Hearts", "Two of Hearts",
+      "Three of Hearts", "Four of Hearts", "Five of Hearts", "Ace of Diamonds",
+      "Two of Diamonds", "Three of Diamonds", "Four of Diamonds", "Five of Diamonds"]
+
 
   """
 
@@ -32,6 +37,22 @@ defmodule Cards do
 
   @doc """
     Deal cards. The `hand_size` is the total cards given to a player
+  ## Examples
+
+    iex> deck = Cards.create_deck
+    ["Ace of Spades", "Two of Spades", "Three of Spades", "Four of Spades",
+    "Five of Spades", "Ace of Clubs", "Two of Clubs", "Three of Clubs",
+    "Four of Clubs", "Five of Clubs", "Ace of Hearts", "Two of Hearts",
+    "Three of Hearts", "Four of Hearts", "Five of Hearts", "Ace of Diamonds",
+    "Two of Diamonds", "Three of Diamonds", "Four of Diamonds", "Five of Diamonds"]
+    iex> Cards.deal(deck, 5)
+    {["Ace of Spades", "Two of Spades", "Three of Spades", "Four of Spades",
+    "Five of Spades"],
+    ["Ace of Clubs", "Two of Clubs", "Three of Clubs", "Four of Clubs",
+    "Five of Clubs", "Ace of Hearts", "Two of Hearts", "Three of Hearts",
+    "Four of Hearts", "Five of Hearts", "Ace of Diamonds", "Two of Diamonds",
+    "Three of Diamonds", "Four of Diamonds", "Five of Diamonds"]}
+
   """
 
   def deal(deck, hand_size) do
